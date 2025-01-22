@@ -1,22 +1,35 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+---
+import ico from "../assets/favicon.ico";
+import global from "../assets/styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Body from "../components/Body.astro";
+const lang = Astro.currentLocale ?? 'es';
+
+let title = lang=='es'?"Luis Pacheco - Desarrollador - Portafolio": "Luis Pacheco - Developer - Portfolio"
+
+const menu = [
+    {url:"/",name: lang=='es'?'inicio':'home'},
+    {url:"/works",name: lang=='es'?'trabajos':'works'},
+    {url:"/contact-me",name: lang=='es'?'contactame':'contact me'}
+];
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href={ico} type="image/x-icon">
+    <link rel="stylesheet" href={global}/>
+    <title>{title}</title>
+</head>
+<body>
+    <Header title="Luis Pacheco" lang={lang}  menu={menu}/>
+    <Body>
+        <slot/>
+    </Body>
+    <Footer/>
+</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

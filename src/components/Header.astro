@@ -1,0 +1,26 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import  '../assets/styles/header.css';
+
+const {title,lang,menu} = Astro.props;
+---
+<header>
+    <section class="nav-bar">
+        <div class="burger-button">
+            <div class="burger-button-bar"></div>
+            <div class="burger-button-bar"></div>
+            <div class="burger-button-bar"></div>
+        </div>
+        <article class="nav-header">
+            <h1>{title}</h1>
+        </article>
+        <article class="nav">
+            <nav>
+                <ul>
+                    {menu.map(elem => <li class="nav-item"><a class="nav-link" href={getRelativeLocaleUrl(lang,elem.url)}>{elem.name}</a> </li>)}
+                </ul>
+            </nav>
+        </article>
+    </section>
+    <script is:inline src="/scripts/nav.js" type="module"></script>
+</header>

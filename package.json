@@ -6,9 +6,15 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "style": "sass --watch sass:src/assets/styles",
+    "dev:ts": "npx tsc ./ts/*.ts --watch --outDir public/scripts --module es6 --target es6 --moduleResolution node --lib es2016,dom,es5"
   },
   "dependencies": {
     "astro": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.7",
+    "sass": "^1.83.4"
   }
 }
