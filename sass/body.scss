@@ -1,4 +1,112 @@
+@use "colors";
+@use "mixins/head";
+@use "sass:string";
 main {
     display: flex;
     grid-area: body;
+    min-height: 81.2dvb;
+    height: max-content;
+    flex-direction: column;
+    padding-left: 2rem;
+    background: linear-gradient(160deg,colors.$bg-100,colors.$bg-200);
+    box-sizing: border-box;
+    width: 100%;
+}
+[class*=#{string.quote("col-")}]{
+    width: 100%;
+    min-height: 20px;
+}
+
+.description{
+    padding: 2dvw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &>h1{
+        @include head.head-size(3)
+    }
+}
+.container{
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:480px) and (max-width:900px) {
+    main {
+        display: flex;
+        grid-area: body;
+        min-height: 81.2dvb;
+        height: max-content;
+        flex-direction: column;
+        padding-bottom: 5rem;
+        background: linear-gradient(160deg,colors.$bg-100,colors.$bg-200);
+        box-sizing: border-box;
+        width: 100%;
+        
+    }
+
+    @for $i from 1 through 12{
+        $width:(($i*100%)/12);
+        .col-#{$i}{
+            width:#{$width} ;
+            min-height: 20px;
+        }
+    }  
+
+    .container{
+        width: 100%;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .description{
+        padding: 5dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &>h1{
+            @include head.head-size(3)
+        }
+    }
+}
+
+
+@media screen and (min-width:900px) and (max-width:5000px) {
+    @for $i from 1 through 12{
+        $width:(($i*100%)/12);
+        .col-#{$i}{
+            width:#{$width} ;
+            min-height: 20px;
+        }
+    } 
+    
+    
+    .description{
+        padding: 5dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &>h1{
+            @include head.head-size(3)
+        }
+    }
+
+    .container{
+        width: 100%;
+        min-height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

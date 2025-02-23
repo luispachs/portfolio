@@ -1,0 +1,5 @@
+@mixin head-size($size:1,$aling:"center"){
+    font-size:#{(10+($size*2))}px ;
+    text-align: #{$aling};  
+    width: 100dvw;
+}

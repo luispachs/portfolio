@@ -6,11 +6,15 @@
     font-size: 12px;
     font-family: sans-serif;
     box-sizing: border-box;
+    color:colors.$text-100;
 }
 
 
 body{
     display: grid;
+    background: linear-gradient(160deg,colors.$bg-100,colors.$bg-200);
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
     grid-template-areas:
         "header header header header"
         "body body body body"

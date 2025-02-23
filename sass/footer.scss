@@ -1,3 +1,9 @@
+@use "colors";
+
 footer {
     grid-area: footer;
+    background-color: colors.$bg-100;
+    position:sticky;
+    bottom: 0;
+    min-height: 5rem;
 }

@@ -1,5 +1,9 @@
 footer {
   grid-area: footer;
+  background-color: #0F1C2E;
+  position: sticky;
+  bottom: 0;
+  min-height: 5rem;
 }
 
 /*# sourceMappingURL=footer.css.map */
