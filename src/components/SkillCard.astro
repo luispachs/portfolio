@@ -1,0 +1,13 @@
+---
+import "../assets/styles/SkillCard.css";
+const {name,description,icon} = Astro.props;
+---
+
+<article class="skill-card">
+    <div class="skill-icon">
+        <img src={icon} alt={name} />
+    </div>
+    <div class="skill-label">
+        <label>{name.toUpperCase()}</label>
+    </div>
+</article>

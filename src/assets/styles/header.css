@@ -168,8 +168,9 @@ header {
     justify-content: center;
     align-items: center;
     height: inherit;
-    width: 60%;
+    width: 40%;
     position: static;
+    box-sizing: content-box;
   }
   .nav > nav {
     width: 100%;
@@ -182,22 +183,23 @@ header {
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
   }
   .nav-item {
     flex-shrink: 1;
     flex-grow: 1;
-    width: 30%;
+    width: 40%;
     height: 4rem;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+    box-sizing: border-box;
   }
   .nav-link {
     display: flex;
-    width: 40%;
+    width: 100%;
     height: 4rem;
     font-size: 15px;
     font-weight: bold;
@@ -205,11 +207,12 @@ header {
     color: #FFFFFF;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     text-decoration: none;
+    box-sizing: border-box;
   }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 900px) and (max-width: 5000px) {
   header {
     display: flex;
     height: 10dvh;

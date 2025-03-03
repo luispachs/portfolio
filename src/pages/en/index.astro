@@ -1,7 +1,37 @@
 ---
 import Layout from "../../layouts/Layout.astro"
+import SkillCard from "../../components/SkillCard.astro"
+import {Image} from "astro:assets"
+import profileImage from "../../assets/profile-photo-blue-bg.png";
+import skills from "../../assets/data/skills.json";
+
 ---
 
 <Layout>
-    Hello World
+    <section class="container ">
+        <article class="description col-8 bg-100">
+            <h1>
+                Hi!. I'm luis.
+            </h1>
+            <div class="spacing"></div>
+            <h2>
+                Developer with 2 years of experience creating, modifying, testing and deploying applications created with
+                deploying applications created with languages and technological tools, oriented to microservices.
+                microservices.  Resolutive capacity, Teamwork, Leadership, Assertive communication.
+            </h2>
+        </article>
+        <article class="description-image col-4">
+            <Image src={profileImage} alt="Profile image" width={200} height={200} />
+        </article>
+    </section>
+    <section class="container skills-section">
+        <article class="col-12 ">
+            <h2 class="skill-title">Skills</h2>
+        </article>
+        <article class="col-12 bg-100">
+            { skills.skills.map((skill, i) => {
+                return  <SkillCard name={skill.name} icon={skill.icon} description={skill.description} key={i} />
+            })}
+        </article>
+    </section>
 </Layout>

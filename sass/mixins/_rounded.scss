@@ -1,0 +1,7 @@
+@mixin rounded(){
+  @for $i from 0 through 5{
+      .rounded-#{$i}{
+        border-radius:#{$i*4px};
+      }
+  }
+}

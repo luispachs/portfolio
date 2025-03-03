@@ -3,8 +3,10 @@ main {
   grid-area: body;
   min-height: 81.2dvb;
   height: max-content;
+  align-items: center;
   flex-direction: column;
-  padding-left: 2rem;
+  padding-left: 5px;
+  padding-right: 5px;
   background: linear-gradient(160deg, #0F1C2E, #1f2b3e);
   box-sizing: border-box;
   width: 100%;
@@ -15,26 +17,116 @@ main {
   min-height: 20px;
 }
 
+.skills-section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  flex-wrap: wrap;
+}
+.skills-section > article:last-child {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.skill-title {
+  font-size: 22px;
+  text-align: center;
+  width: 100dvw;
+  width: 100%;
+}
+
+.spacing {
+  height: 5dvh;
+  width: 100%;
+}
+
+.primary-100 {
+  background: linear-gradient(180deg, #1F3A5F, #4d648d 50%);
+}
+
+.primary-200 {
+  background: linear-gradient(180deg, #4d648d, #acc2ef 50%);
+}
+
+.bg-100 {
+  background: linear-gradient(180deg, #0F1C2E, #1f2b3e 50%);
+}
+
+.bg-200 {
+  background: linear-gradient(180deg, #1f2b3e, #374357 50%);
+}
+
+.rounded-0 {
+  border-radius: 0px;
+}
+
+.rounded-1 {
+  border-radius: 4px;
+}
+
+.rounded-2 {
+  border-radius: 8px;
+}
+
+.rounded-3 {
+  border-radius: 12px;
+}
+
+.rounded-4 {
+  border-radius: 16px;
+}
+
+.rounded-5 {
+  border-radius: 20px;
+}
+
 .description {
-  padding: 2dvw;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .description > h1 {
+  font-size: 22px;
+  text-align: start;
+  width: 100dvw;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.description > h2 {
   font-size: 16px;
   text-align: center;
   width: 100dvw;
+  width: 100%;
 }
 
 .container {
   width: 100%;
-  min-height: 100dvh;
+  min-height: 78dvh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  padding: 5px;
+  background: url("/assets/pattern.svg") transparent;
+}
+
+.description-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.description-image > img {
+  border-radius: 50%;
 }
 
 @media screen and (min-width: 480px) and (max-width: 900px) {
@@ -43,10 +135,15 @@ main {
     grid-area: body;
     min-height: 81.2dvb;
     height: max-content;
+    align-items: center;
     flex-direction: column;
     padding-bottom: 5rem;
     background: linear-gradient(160deg, #0F1C2E, #1f2b3e);
     box-sizing: border-box;
+    width: 100%;
+  }
+  .spacing {
+    height: 5dvh;
     width: 100%;
   }
   .col-1 {
@@ -97,13 +194,39 @@ main {
     width: 100%;
     min-height: 20px;
   }
-  .container {
-    width: 100%;
-    min-height: 100dvh;
-    display: flex;
+  .skills-section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 90%;
+    height: max-content;
+    gap: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+  }
+  .skills-section > article:last-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .skill-title {
+    font-size: 22px;
+    text-align: center;
+    width: 100dvw;
+    width: 100%;
+  }
+  .container {
+    width: 90%;
+    min-height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: transparent;
+    padding: 5px;
+    background: url("/assets/pattern.svg") transparent;
   }
   .description {
     padding: 5dvw;
@@ -113,8 +236,16 @@ main {
     justify-content: center;
   }
   .description > h1 {
+    font-size: 22px;
+    text-align: start;
+    width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .description > h2 {
     font-size: 16px;
-    text-align: center;
+    text-align: start;
     width: 100dvw;
   }
 }
@@ -167,6 +298,22 @@ main {
     width: 100%;
     min-height: 20px;
   }
+  main {
+    display: flex;
+    grid-area: body;
+    min-height: 81.2dvb;
+    height: max-content;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5rem;
+    background: linear-gradient(160deg, #0F1C2E, #1f2b3e);
+    box-sizing: border-box;
+    width: 100%;
+  }
+  .spacing {
+    height: 5dvh;
+    width: 100%;
+  }
   .description {
     padding: 5dvw;
     display: flex;
@@ -175,17 +322,54 @@ main {
     justify-content: center;
   }
   .description > h1 {
-    font-size: 16px;
-    text-align: center;
+    font-size: 22px;
+    text-align: start;
     width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .description > h2 {
+    font-size: 16px;
+    text-align: start;
+    width: 100dvw;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
   .container {
-    width: 100%;
-    min-height: 100dvh;
+    width: 80%;
+    min-height: 70dvh;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    background: url("/assets/pattern.svg") transparent;
+  }
+  .skills-section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 80%;
+    height: fit-content;
+    gap: 10px;
+    box-sizing: border-box;
+  }
+  .skills-section > article:last-child {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: fit-content;
+  }
+  .skill-title {
+    font-size: 22px;
+    text-align: center;
+    width: 100dvw;
+    width: 100%;
   }
 }
 
