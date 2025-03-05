@@ -1,0 +1,170 @@
+@use "headers";
+@use "colors" ;
+@use "mixins/rounded";
+
+@include rounded.rounded;
+
+.work-card{
+  width: 90%;
+  min-height: 20vh;
+  height: fit-content;
+  display: grid;
+  margin: 5px;
+  background: colors.$bg-100 ;
+  grid-template-areas:
+    "icon icon icon"
+    "head head head"
+    "body body body"
+  ;
+}
+
+.work-icon{
+  width: 100%;
+  grid-area: icon;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &>img.work-logo{
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.work-head{
+  width: 100%;
+  grid-area:head;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &>h3{
+    @include headers.header(2);
+  }
+
+}
+.work-body{
+  width: 100%;
+  grid-area:body;
+  padding: 5px;
+  &>p .work-description{
+    text-align: start;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 900px) {
+
+  .work-card{
+    width: 60%;
+    min-height: 20vh;
+    height: fit-content;
+    background: colors.$bg-100 ;
+    display: grid;
+    margin: 5px;
+    grid-template-areas:
+      "icon head head"
+      "icon body body"
+      "icon body body"
+  ;
+  }
+
+  .work-icon{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: icon;
+    &>img.work-logo{
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  .work-head{
+    width: 100%;
+    grid-area:head;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &>h3{
+      @include headers.header(2);
+    }
+
+  }
+  .work-body{
+    width: 100%;
+    grid-area:body;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &> p .work-description{
+      text-align: start;
+      font-size: 16px;
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 900px) and (max-width: 5000px) {
+  .work-card{
+    width: 50%;
+    min-height: 20vh;
+    height: fit-content;
+    display: grid;
+    background: colors.$bg-100 ;
+    margin: 5px;
+    grid-template-areas:
+      "icon head head"
+      "icon body body"
+      "icon body body"
+      ;
+  }
+
+  .work-icon{
+    width: 100%;
+    grid-area: icon;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &>img.work-logo{
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  .work-head{
+    width: 100%;
+    grid-area:head;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    &>h3{
+      @include headers.header(2);
+    }
+
+  }
+  .work-body{
+    width: 100%;
+    grid-area:body;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    &>p .work-description{
+      text-align: start;
+      font-size: 12px;
+    }
+  }
+
+}
+
+

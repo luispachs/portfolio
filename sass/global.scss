@@ -1,5 +1,6 @@
 @use 'colors';
 @use 'headers';
+@use 'mixins/heigths';
 *{
     padding: 0;
     margin: 0;
@@ -9,6 +10,8 @@
     color: colors.$text-100;
 }
 
+
+@include heigths.heights(50);
 
 body{
     display: grid;
@@ -40,7 +43,7 @@ body{
     }
 }
 
-@media screen and (min-width:900px) {
+@media screen and (min-width:900px)  and (max-width: 5000px){
     .content-block{
         display: flex;
         flex-direction: row;

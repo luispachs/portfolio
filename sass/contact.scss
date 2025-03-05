@@ -1,0 +1,27 @@
+@use 'colors';
+.wp-form{
+  background: colors.$primary-100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 80%;
+  height: 20dvh;
+  gap: 5px;
+  &>textarea {
+    width: 80%;
+    height: 20vh;
+    resize: none;
+  }
+}
+
+.email-action{
+  background: colors.$primary-100;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 20dvh;
+  justify-content: center;
+  align-items: center;
+}

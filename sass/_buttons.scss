@@ -1,0 +1,38 @@
+@use  "colors";
+
+.btn {
+  width: 40%;
+  border:none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #fff;
+  color:#000;
+  height: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-lg{
+  width: 100%;
+}
+
+.btn-md{
+  width: 60%;
+}
+
+.btn-sm{
+  width: 30%;
+}
+
+.btn-accent-100{
+  background-color: colors.$accent-100;
+  color: colors.$text-100;
+}
+
+.btn-accent-200{
+  background-color: colors.$accent-200;
+  color: colors.$text-200;
+}
+

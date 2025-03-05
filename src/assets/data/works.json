@@ -1,0 +1,28 @@
+{
+  "works": {
+    "es": [
+      {
+        "business": "Newcomm Management",
+        "description": " En Newcomm Management he sido el encargado de orientar el desarrollo de sus aplicaciones internas haciendo uso de herramientas como Next.js, Laravel y flutter, buscando optimizar y mejorar sus procesos. Además integrando y administrando AWS tanto para el desarrollo como para paso a producción. Realizar proceso de analísis para diseño y desarrollo de bases de datos, usando como motores PostgreSQL y MySQL",
+        "logo": "/assets/newcomm.jpg"
+      },
+      {
+        "business": "Aplicaciones Dinámicas",
+        "description": "En Aplicaciones Dinámicas me encargué de realizar mantenimiento y actualización de sistemas existentes haciendo uso de Symfony, el cual se actualizó de la versión 4 a la versión 6.3. En este proceso se usaron herramientas de AWS como S3, lambda, RDS con MySQL. ElasticBeanStack para realizar el despliegue de los sistemas. Además, estuve encargado de desarrollar las API requeridas por el sistema usando arquitectura de microservicios en este proceso. Estuve a cargo de migrar las páginas de documentación y las páginas estáticas haciendo uso de Hugo Framework. También implementé scrape haciendo uso de Python con el objetivo de generar campañas de marketing",
+        "logo": "/assets/APDI.png"
+      }
+    ],
+    "en": [
+      {
+        "business": "Newcomm Management",
+        "description": "In Newcomm Management I have been in charge of guiding the development of their internal applications using tools such as Next.js, Laravel and flutter, seeking to optimize and improve their processes. Also integrating and managing AWS for both development and production. Perform analysis process for database design and development, using PostgreSQL and MySQL as engines",
+        "logo": "/assets/newcomm.jpg"
+      },
+      {
+        "business": "Aplicaciones Dinámicas",
+        "description": "In Aplicaciones Dinámicas I was in charge of maintaining and upgrading existing systems using Symfony, which was upgraded from version 4 to version 6.3. In this process we used AWS tools such as S3, lambda, RDS with MySQL. ElasticBeanStack to deploy the systems. In addition, I was in charge of developing the APIs required by the system using microservices architecture in this process. I was in charge of migrating the documentation pages and static pages using Hugo Framework. I also implemented scrape using Python in order to generate marketing campaigns.Translated with DeepL.com (free version)",
+        "logo": "/assets/APDI.png"
+      }
+    ]
+  }
+}

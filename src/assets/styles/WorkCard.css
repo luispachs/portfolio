@@ -1,0 +1,347 @@
+.rounded-0 {
+  border-radius: 0px;
+}
+
+.rounded-1 {
+  border-radius: 4px;
+}
+
+.rounded-2 {
+  border-radius: 8px;
+}
+
+.rounded-3 {
+  border-radius: 12px;
+}
+
+.rounded-4 {
+  border-radius: 16px;
+}
+
+.rounded-5 {
+  border-radius: 20px;
+}
+
+.rounded-6 {
+  border-radius: 24px;
+}
+
+.rounded-7 {
+  border-radius: 28px;
+}
+
+.rounded-8 {
+  border-radius: 32px;
+}
+
+.rounded-9 {
+  border-radius: 36px;
+}
+
+.rounded-10 {
+  border-radius: 40px;
+}
+
+.rounded-11 {
+  border-radius: 44px;
+}
+
+.rounded-12 {
+  border-radius: 48px;
+}
+
+.rounded-13 {
+  border-radius: 52px;
+}
+
+.rounded-14 {
+  border-radius: 56px;
+}
+
+.rounded-15 {
+  border-radius: 60px;
+}
+
+.rounded-16 {
+  border-radius: 64px;
+}
+
+.rounded-17 {
+  border-radius: 68px;
+}
+
+.rounded-18 {
+  border-radius: 72px;
+}
+
+.rounded-19 {
+  border-radius: 76px;
+}
+
+.rounded-20 {
+  border-radius: 80px;
+}
+
+.rounded-21 {
+  border-radius: 84px;
+}
+
+.rounded-22 {
+  border-radius: 88px;
+}
+
+.rounded-23 {
+  border-radius: 92px;
+}
+
+.rounded-24 {
+  border-radius: 96px;
+}
+
+.rounded-25 {
+  border-radius: 100px;
+}
+
+.rounded-26 {
+  border-radius: 104px;
+}
+
+.rounded-27 {
+  border-radius: 108px;
+}
+
+.rounded-28 {
+  border-radius: 112px;
+}
+
+.rounded-29 {
+  border-radius: 116px;
+}
+
+.rounded-30 {
+  border-radius: 120px;
+}
+
+.rounded-31 {
+  border-radius: 124px;
+}
+
+.rounded-32 {
+  border-radius: 128px;
+}
+
+.rounded-33 {
+  border-radius: 132px;
+}
+
+.rounded-34 {
+  border-radius: 136px;
+}
+
+.rounded-35 {
+  border-radius: 140px;
+}
+
+.rounded-36 {
+  border-radius: 144px;
+}
+
+.rounded-37 {
+  border-radius: 148px;
+}
+
+.rounded-38 {
+  border-radius: 152px;
+}
+
+.rounded-39 {
+  border-radius: 156px;
+}
+
+.rounded-40 {
+  border-radius: 160px;
+}
+
+.rounded-41 {
+  border-radius: 164px;
+}
+
+.rounded-42 {
+  border-radius: 168px;
+}
+
+.rounded-43 {
+  border-radius: 172px;
+}
+
+.rounded-44 {
+  border-radius: 176px;
+}
+
+.rounded-45 {
+  border-radius: 180px;
+}
+
+.rounded-46 {
+  border-radius: 184px;
+}
+
+.rounded-47 {
+  border-radius: 188px;
+}
+
+.rounded-48 {
+  border-radius: 192px;
+}
+
+.rounded-49 {
+  border-radius: 196px;
+}
+
+.rounded-50 {
+  border-radius: 200px;
+}
+
+.work-card {
+  width: 90%;
+  min-height: 20vh;
+  height: fit-content;
+  display: grid;
+  margin: 5px;
+  background: #0F1C2E;
+  grid-template-areas: "icon icon icon" "head head head" "body body body";
+}
+
+.work-icon {
+  width: 100%;
+  grid-area: icon;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.work-icon > img.work-logo {
+  width: 10rem;
+  height: 10rem;
+}
+
+.work-head {
+  width: 100%;
+  grid-area: head;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.work-head > h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.work-body {
+  width: 100%;
+  grid-area: body;
+  padding: 5px;
+}
+.work-body > p .work-description {
+  text-align: start;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 900px) {
+  .work-card {
+    width: 60%;
+    min-height: 20vh;
+    height: fit-content;
+    background: #0F1C2E;
+    display: grid;
+    margin: 5px;
+    grid-template-areas: "icon head head" "icon body body" "icon body body";
+  }
+  .work-icon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: icon;
+  }
+  .work-icon > img.work-logo {
+    width: 10rem;
+    height: 10rem;
+  }
+  .work-head {
+    width: 100%;
+    grid-area: head;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-head > h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .work-body {
+    width: 100%;
+    grid-area: body;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-body > p .work-description {
+    text-align: start;
+    font-size: 16px;
+  }
+}
+@media screen and (min-width: 900px) and (max-width: 5000px) {
+  .work-card {
+    width: 50%;
+    min-height: 20vh;
+    height: fit-content;
+    display: grid;
+    background: #0F1C2E;
+    margin: 5px;
+    grid-template-areas: "icon head head" "icon body body" "icon body body";
+  }
+  .work-icon {
+    width: 100%;
+    grid-area: icon;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-icon > img.work-logo {
+    width: 10rem;
+    height: 10rem;
+  }
+  .work-head {
+    width: 100%;
+    grid-area: head;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-head > h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .work-body {
+    width: 100%;
+    grid-area: body;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-body > p .work-description {
+    text-align: start;
+    font-size: 12px;
+  }
+}
+
+/*# sourceMappingURL=WorkCard.css.map */

@@ -2,6 +2,12 @@
 @use "mixins/head";
 @use "sass:string";
 @use "mixins/rounded";
+@use "buttons";
+
+
+@import "buttons";
+
+
 main {
     display: flex;
     grid-area: body;
@@ -17,7 +23,7 @@ main {
 }
 [class*=#{string.quote("col-")}]{
     width: 100%;
-    min-height: 20px;
+    min-height: fit-content;
 }
 .skills-section{
     flex-direction: column;
@@ -30,7 +36,11 @@ main {
     & > article:last-child{
         display: flex;
         flex-direction: row;
+        width: 100%;
         flex-wrap: wrap;
+        background: transparent;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -42,7 +52,12 @@ main {
     height: 5dvh;
     width: 100%;
 }
-
+.d-col{
+    flex-direction: column;
+}
+.d-row{
+    flex-direction: row;
+}
 .primary-100{
     background:linear-gradient(180deg,colors.$primary-100,colors.$primary-200 50%);
 }
@@ -60,6 +75,7 @@ main {
 
 .description{
     padding: 5px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,8 +87,11 @@ main {
         width: 100%;
     }
     &>h2{
-        @include head.head-size(3);
+        font-size: 14px;
+        font-weight: bold;
         width:100%;
+        text-align: start;
+        text-wrap: pretty;
     }
 }
 .container{
@@ -89,6 +108,13 @@ main {
     background:url("/assets/pattern.svg") transparent;
 }
 
+.d-col{
+    flex-direction: column;
+}
+.d-row{
+    flex-direction: row;
+}
+
 .description-image{
     display: flex;
     flex-direction: row;
@@ -96,10 +122,112 @@ main {
     align-items: center;
     &>img{
         border-radius: 50%;
+        width: 290px;
+        height: 290px;
     }
 }
 
-@media screen and (min-width:480px) and (max-width:900px) {
+@media screen and (min-width:480px) and (max-width:700px) {
+    main {
+        display: flex;
+        grid-area: body;
+        min-height: 81.2dvb;
+        height: max-content;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 5rem;
+        background: linear-gradient(160deg,colors.$bg-100,colors.$bg-200);
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .spacing{
+        height: 5dvh;
+        width: 100%;
+    }
+
+    [class^="col-"]{
+        width: 100%;
+    }
+    
+    .skills-section{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: max-content;
+        gap: 10px;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        & > article:last-child{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .skill-title{
+        @include head.head-size(6,quote(center));
+        width: 100%;
+    }
+
+    .container{
+        width: 90%;
+        min-height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top:20px;
+        margin-bottom: 20px;
+        background: transparent;
+        padding: 5px;
+        background:url("/assets/pattern.svg") transparent;
+    }
+
+    .description-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    .d-col{
+        flex-direction: column;
+    }
+    .d-row{
+        flex-direction: row ;
+    }
+
+    .description{
+        padding: 5dvw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &>h1{
+            @include head.head-size(6,quote(start));
+            width: 100%;
+            text-align: start;
+        }
+        &>h2{
+            @include head.head-size(3,quote(start));
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width:700px) and (max-width:900px) {
     main {
         display: flex;
         grid-area: body;
@@ -122,13 +250,13 @@ main {
         $width:(($i*100%)/12);
         .col-#{$i}{
             width:#{$width} ;
-            min-height: 20px;
+            min-height: fit-content;
         }
-    }  
+    }
 
-    
+
     .skills-section{
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         width: 90%;
@@ -139,7 +267,11 @@ main {
         & > article:last-child{
             display: flex;
             flex-direction: row;
+            width: 100%;
             flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
         }
     }
 
@@ -161,7 +293,27 @@ main {
         padding: 5px;
         background:url("/assets/pattern.svg") transparent;
     }
-    
+
+    .description-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    .d-col{
+        flex-direction: column;
+    }
+    .d-row{
+        flex-direction: row ;
+    }
+
     .description{
         padding: 5dvw;
         display: flex;
@@ -170,15 +322,16 @@ main {
         justify-content: center;
         &>h1{
             @include head.head-size(6,quote(start));
-            display:flex;
-            flex-direction: row;
             width: 100%;
+            text-align: start;
         }
         &>h2{
             @include head.head-size(3,quote(start));
+            width: 100%;
         }
     }
 }
+
 
 
 @media screen and (min-width:900px) and (max-width:5000px) {
@@ -186,7 +339,7 @@ main {
         $width:(($i*100%)/12);
         .col-#{$i}{
             width:#{$width} ;
-            min-height: 20px;
+            min-height: fit-content;
         }
     }
     main {
@@ -225,10 +378,24 @@ main {
             width: 100%;
         }
     }
+    .description-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        & > img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%);
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
 
     .container{
         width: 80%;
-        min-height: 70dvh;
+        min-height: max-content;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -254,6 +421,7 @@ main {
             flex-direction: row;
             flex-wrap: wrap;
             min-height: fit-content;
+            background: transparent;
         }
     }
 

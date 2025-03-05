@@ -1,7 +1,19 @@
 ---
-import Layout from '../../../layouts/Layout.astro'
+import Layout from '../../../layouts/Layout.astro';
+import works from "../../../assets/data/works.json";
+import "../../../assets/styles/WorkCard.css";
 ---
 
 <Layout>
-    <h1>Works</h1>
+    <section class="container rounded-3" style="flex-direction: column;">
+        {
+            works.works.en.map((work,key) => {
+                return <section class="work-card rounded-3" key={key} >
+                    <div class="work-icon"><img src={work.logo} class="work-logo rounded-50"/></div>
+                    <div class="work-head"><h3 class="work-title">{work.business}</h3></div>
+                    <div class="work-body"><p class="work-description">{work.description}</p></div>
+                </section>;
+            })
+        }
+    </section>
 </Layout>

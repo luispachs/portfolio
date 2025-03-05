@@ -1,0 +1,7 @@
+@mixin heights($it){
+  @for $i from 1 through $it{
+    .h-#{$i}{
+      min-height: #{$i}rem !important;
+    }
+  }
+}

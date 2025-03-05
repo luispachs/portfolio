@@ -1,7 +1,21 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import '../../assets/styles/contact.css'
 ---
 
 <Layout>
-    <h1>contact me</h1>
+  <section class="container">
+      <article class="col-6 content-block h-30">
+          <form action=" https://wa.me/573209345419" method="get" class="wp-form rounded-1">
+              <h2>Enviame un mensaje</h2>
+              <textarea name="text" id="text" class="rounded-1"></textarea>
+              <button type="submit" class="btn btn-md btn-accent-100">Enviar</button>
+          </form>
+      </article>
+      <article  class="col-6 content-block">
+          <div class="email-action rounded-1">
+          <a href="mailto:laps1308@gmail.com" class="btn btn-md btn-accent-100">Contactame</a>
+          </div>
+      </article>
+  </section>
 </Layout>

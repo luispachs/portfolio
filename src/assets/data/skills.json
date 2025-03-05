@@ -14,7 +14,7 @@
         {"name":"AWS RDS","icon":"/assets/icons/aws-rds.png","description":""},
         {"name":"AWS Lambda","icon":"/assets/icons/aws-lambda.png","description":""},
         {"name":"AWS EC2","icon":"/assets/icons/aws-ec2.png","description":""},
-        {"name":"AWS ElasticCache","icon":"/assets/icons/aws-elasticache.png","description":""},
+        {"name":"AWS ElastiCache","icon":"/assets/icons/aws-elasticache.png","description":""},
         {"name":"AWS SES","icon":"/assets/icons/aws-ses.png","description":""},
         {"name":"AWS SQS","icon":"/assets/icons/aws-sqs.png","description":""},
         {"name":"AWS Route 53","icon":"/assets/icons/aws-route53.png","description":""},

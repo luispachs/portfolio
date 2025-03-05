@@ -1,0 +1,28 @@
+.wp-form {
+  background: #1F3A5F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 80%;
+  height: 20dvh;
+  gap: 5px;
+}
+.wp-form > textarea {
+  width: 80%;
+  height: 20vh;
+  resize: none;
+}
+
+.email-action {
+  background: #1F3A5F;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: 20dvh;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=contact.css.map */
