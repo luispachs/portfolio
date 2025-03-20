@@ -24,7 +24,10 @@ jobs:
       - name: install dependencies
         run: npm i
       - name: fetch branch
-        run: git pull
+        run: |
+              git pull
+              git branch
+              git checkout ${{env.branch}}
       - name: build site
         run: npm run astro build
       
