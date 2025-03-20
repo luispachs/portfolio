@@ -8,4 +8,6 @@ export default defineConfig({
     locales: ["es", "en"],
     defaultLocale: "es",
   },
+  site:'https://<username>.github.io',
+  base:'portfolio'
 });
