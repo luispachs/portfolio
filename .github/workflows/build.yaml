@@ -30,6 +30,7 @@ jobs:
       
       - name: save change
         run: |
+              git branch
               git config user.name ${{vars.USERNAME}}
               git config user.email ${{vars.EMAIL_ACTOR}}
               git add .
