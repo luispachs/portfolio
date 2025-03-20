@@ -25,7 +25,7 @@ jobs:
         run: npm i
       
       - name: build site
-        run: npm astro build
+        run: npm run astro build
       
       - name: save change
         run: |
