@@ -35,7 +35,7 @@ jobs:
               git commit -m "building app"
               git pull origin main --no-rebase
               git checkout main
-              git merge ${{env.branch}}
+              git merge ${{env.branch}} --allow-unrelated-histories
               git pull origin main
 
      
