@@ -33,7 +33,7 @@ jobs:
               git config user.email ${{vars.EMAIL_ACTOR}}
               git add .
               git commit -m "building app"
-              git checkout main
+              git checkout  -b  main
               git merge ${{env.branch}}
               git pull origin main
 
