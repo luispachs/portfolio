@@ -8,6 +8,10 @@ export default defineConfig({
     locales: ["es", "en"],
     defaultLocale: "es",
   },
-  site:'https://<username>.github.io',
-  base:'portfolio'
+  site:'https://luispachs.github.io',
+  base:'portfolio',
+  build:{
+    assets: "assets"
+  },
+  outDir: './docs'
 });

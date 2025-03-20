@@ -1,36 +1,40 @@
 name: build
-run-name: "building portfolio project - laps"
 on:
   push:
-    branches: [main]
-  workflow_dispatch:
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+      - development/*
+env:
+  branch: ${{vars.BRANCHNAME}}
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Install, build astro
-        uses: withastro/action@v2
-        with:
-          package-manager: npm@10.9.2
-          node-version: 23
 
-      
-  deploy:
-    needs: build
-    runs-on: ubuntu@latest
-    environment:
-      name: github-pages
-      url: ${{steps.deployment.outputs.page_url}}
     steps:
-      - name: Deploy Github Pages
-        id: deployment
-        uses:  actions/deploy-pages@v4
+      - name: config node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 23
+      - name: checkout development
+        uses: actions/checkout@v4
+        with:
+          token: ${{secrets.TOKEN}}
+      
+      - name: install dependencies
+        run: npm i
+      
+      - name: build site
+        run: npm artro build
+      
+      - name: save change
+        run: |
+              git config user.name ${{vars.USERNAME}}
+              git config user.email ${{vars.EMAIL_ACTOR}}
+              git add .
+              git commit -m "building app"
+              git checkout main
+              git merge ${{env.branch}}
+              git pull origin main
 
      
 
