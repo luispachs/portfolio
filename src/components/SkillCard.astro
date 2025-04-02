@@ -1,13 +1,11 @@
 ---
 import "../assets/styles/SkillCard.css";
 const {name,description,icon} = Astro.props;
-const imgSource = await import(icon)
-const source = imgSource.src;
 ---
 
 <article class="skill-card">
     <div class="skill-icon">
-        <img src={source} alt={name}  title={description}/>
+        <img src={icon} alt={name} />
     </div>
     <div class="skill-label">
         <label>{name.toUpperCase()}</label>
