@@ -9,7 +9,7 @@ import "../../assets/styles/WorkCard.css";
         {
             works.works.es.map((work,key) => {
                 return <section class="work-card rounded-3" key={key} >
-                            <div class="work-icon"><img src={work.logo} class="work-logo rounded-50"/></div>
+                            <div class="work-icon"><img src={"https://luispachs.github.io/"+work.logo} class="work-logo rounded-50"/></div>
                             <div class="work-head"><h3 class="work-title">{work.business}</h3></div>
                             <div class="work-body"><p class="work-description">{work.description}</p></div>
                         </section>;
