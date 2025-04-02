@@ -12,13 +12,13 @@
         {"name":"PostgreSQL","icon":"portfolio/public/assets/icons/postgresql.png","description":""},
         {"name":"AWS S3","icon":"portfolio/public/assets/icons/aws-s3.png","description":""},
         {"name":"AWS RDS","icon":"portfolio/public/assets/icons/aws-rds.png","description":""},
-        {"name":"AWS Lambda","icon":"portfolio/public/assets/icons/aws-lambda.png","description":""},
-        {"name":"AWS EC2","icon":"portfolio/public/assets/icons/aws-ec2.png","description":""},
-        {"name":"AWS ElastiCache","icon":"portfolio/public/assets/icons/aws-elasticache.png","description":""},
-        {"name":"AWS SES","icon":"portfolio/public/assets/icons/aws-ses.png","description":""},
-        {"name":"AWS SQS","icon":"portfolio/public/assets/icons/aws-sqs.png","description":""},
-        {"name":"AWS Route 53","icon":"portfoli/publico/assets/icons/aws-route53.png","description":""},
-        {"name":"AWS DynamoDB","icon":"portfolio/public/assets/icons/aws-dynamodb.png","description":""}
+        {"name":"AWS Lambda","icon":"portfolio/assets/icons/aws-lambda.png","description":""},
+        {"name":"AWS EC2","icon":"portfolio/assets/icons/aws-ec2.png","description":""},
+        {"name":"AWS ElastiCache","icon":"portfolio/assets/icons/aws-elasticache.png","description":""},
+        {"name":"AWS SES","icon":"portfolio/assets/icons/aws-ses.png","description":""},
+        {"name":"AWS SQS","icon":"portfolio/assets/icons/aws-sqs.png","description":""},
+        {"name":"AWS Route 53","icon":"portfoli/assets/icons/aws-route53.png","description":""},
+        {"name":"AWS DynamoDB","icon":"portfolio/assets/icons/aws-dynamodb.png","description":""}
         
     ]
 }
